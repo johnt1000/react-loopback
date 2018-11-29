@@ -1,0 +1,3 @@
+[submodule "loopback-getting-started"]
+	path = backend
+	url = https://github.com/johnt1000/loopback-getting-started

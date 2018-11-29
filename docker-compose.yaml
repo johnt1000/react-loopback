@@ -1,0 +1,66 @@
+version: '3'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    networks:
+      - backend
+    environment:
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: getting_started_intermediate
+    ports:
+      - 27017:27017
+
+  db:
+    image: mariadb
+    restart: always
+    networks:
+      - backend
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: getting_started
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: L00pBack
+    ports:
+      - 3306:3306
+
+  loopback:
+    image: jonatasra/loopback-cli-app
+    restart: always
+    build:
+      context: ./backend
+    command: node .
+    networks:
+      - backend
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+      - mongo
+
+  react:
+    image: jonatasra/react
+    restart: always
+    build:
+      context: ./frontend
+    command: npm start
+    networks:
+      - backend
+      - frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - 8000:8000
+
+networks:
+  backend:
+    driver: bridge
+  frontend:
+    driver: bridge
