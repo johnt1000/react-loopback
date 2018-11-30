@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
-
+git
 const styles = {
   root: {
     flexGrow: 1,
@@ -24,16 +24,16 @@ function ButtonAppBar(props) {
     const { classes } = props;
 
     return (
-        <div class={classes.root}>
+        <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" color="inherit" className={classes.grow}>
-                        <Link class='linkNavbar' to='/'>Coffe Shop</Link>
+                        <Link className='linkNavbar' to='/'>Coffe Shop</Link>
                     </Typography>
-                    <Link class='linkNavbar' to='/login' button>
+                    <Link className='linkNavbar' to='/login' button>
                         <ListItem button>Login</ListItem>
                     </Link>
-                    <Link class='linkNavbar' to='/signup' button>
+                    <Link className='linkNavbar' to='/signup' button>
                         <ListItem button>Sign Up</ListItem>
                     </Link>
                 </Toolbar>

@@ -3,10 +3,9 @@ body {
 }
 
 .container {
-  margin-top: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1150px;
+  margin: 10px auto 10px auto;
+  width: 90%;
+  overflow: hidden;
 }
 
 .linkNavbar {
@@ -30,4 +29,24 @@ li {
 
 .buttomBack {
   margin-left: 2% !important;
+}
+
+.card {
+  width: 31%;
+  height: 10%;
+  float: left;
+  margin: 8px;
+}
+
+.card-media {
+  height: 140px;
+}
+
+.list-review {
+  width: 100%;
+  /* background-color: aliceblue; */
+}
+
+.list-review .typo {
+  display: 'inline';
 }
