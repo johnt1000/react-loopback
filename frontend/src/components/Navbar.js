@@ -30,7 +30,7 @@ function ButtonAppBar(props) {
                     <Typography variant="h6" color="inherit" className={classes.grow}>
                         <Link class='linkNavbar' to='/'>Coffe Shop</Link>
                     </Typography>
-                    <Link class='linkNavbar' to='/signin' button>
+                    <Link class='linkNavbar' to='/login' button>
                         <ListItem button>Login</ListItem>
                     </Link>
                     <Link class='linkNavbar' to='/signup' button>
