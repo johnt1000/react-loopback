@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
-git
+
 const styles = {
   root: {
     flexGrow: 1,
